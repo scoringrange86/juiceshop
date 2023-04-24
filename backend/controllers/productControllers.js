@@ -8,7 +8,7 @@ export const getAllProducts = async (request, response) =>{
 
     try{
         const products = await Product.find({});
-
+        // console.log("db products ", response.json(products));
         response.json(products);
     }catch(error){
         console.error(error);
